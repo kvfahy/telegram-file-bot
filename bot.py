@@ -160,4 +160,11 @@ if __name__ == "__main__":
     print(f"📱 Bot Token: {BOT_TOKEN[:20]}...")
     print(f"💾 Storage Channel: {CHANNEL_ID}")
     print(f"👤 Owner: {OWNER_ID}")
-    app.run()
+    print("🔄 Starting polling mode...")
+    
+    try:
+        app.run()
+    except Exception as e:
+        print(f"❌ Error starting bot: {e}")
+        import traceback
+        traceback.print_exc()
